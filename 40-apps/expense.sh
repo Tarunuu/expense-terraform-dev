@@ -1,5 +1,6 @@
 #!/bin/bash
 dnf install ansible -y
+cd /tmp
 git clone https://github.com/Tarunuu/expense-ansible.git
 cd expense-ansible
 ansible-playbook -i inventory.ini mysql.yaml

@@ -2,7 +2,7 @@ module "bastion" {
   source  = "terraform-aws-modules/ec2-instance/aws"
 
   
-  ami = data.aws_ami.nobody.id
+  ami = data.aws_ami.nobody0.id
   name = local.resource_name
 
   instance_type          = "t3.micro"

@@ -2,7 +2,7 @@ module "mysql" {
   source = "terraform-aws-modules/ec2-instance/aws"
 
 
-  ami  = data.aws_ami.nobody.id
+  ami  = data.aws_ami.nobody0.id
   name = "${local.resource_name}-mysql"
 
   instance_type          = "t3.micro"
@@ -22,7 +22,7 @@ module "backend" {
   source = "terraform-aws-modules/ec2-instance/aws"
 
 
-  ami  = data.aws_ami.nobody.id
+  ami  = data.aws_ami.nobody0.id
   name = "${local.resource_name}-backend"
 
   instance_type          = "t3.micro"
@@ -42,7 +42,7 @@ module "frontend" {
   source = "terraform-aws-modules/ec2-instance/aws"
 
 
-  ami  = data.aws_ami.nobody.id
+  ami  = data.aws_ami.nobody0.id
   name = "${local.resource_name}-frontend"
 
   instance_type          = "t3.micro"
@@ -62,7 +62,7 @@ module "ansible" {
   source = "terraform-aws-modules/ec2-instance/aws"
 
 
-  ami  = data.aws_ami.nobody.id
+  ami  = data.aws_ami.nobody0.id
   name = "${local.resource_name}-ansible"
 
   instance_type          = "t3.micro"
